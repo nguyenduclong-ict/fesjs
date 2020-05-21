@@ -1,9 +1,0 @@
-{
-    "name": "fesjs",
-    "version": "1.0.0",
-    "main": "index.js",
-    "bin": "index.js",
-    "author": "Nguyễn Đức Long <longnd@rabiloo.com.vn>",
-    "license": "MIT",
-    "dependencies": {}
-}
