@@ -1,68 +1,68 @@
-import { Query, Document } from "mongoose";
+import { Query, Document } from 'mongoose'
 
 export declare type GetOneFunction = (
     condition,
     populates?: string[]
-) => Promise<any>;
+) => Promise<any>
 
 export declare type GetManyFunction = (
     condition: any,
     options: GetManyOptions
 ) => Promise<
-    | Pick<Document, "_id">[]
+    | Pick<Document, '_id'>[]
     | {
-          data: Pick<Document, "_id">[];
+          data: Pick<Document, '_id'>[]
           pager: {
-              page: number;
-              total: number;
-              pageSize: number;
-              totalPage: number;
-          };
+              page: number
+              total: number
+              pageSize: number
+              totalPage: number
+          }
       }
->;
+>
 
 export declare type UpdateManyFunction = (
     condition: any,
     data: any,
     options?: any
-) => Query<any>;
+) => Query<any>
 
 export declare type CreateOneFunction = (
     doc: any,
-    mode?: "save" | "create"
-) => Promise<Document>;
+    mode?: 'save' | 'create'
+) => Promise<Document>
 
-export declare type CreateManyFunction = (docs: any) => Promise<Document>;
+export declare type CreateManyFunction = (docs: any) => Promise<Document>
 
-export declare type UpdateOneFunction = (condition, data, options?) => any;
+export declare type UpdateOneFunction = (condition, data, options?) => any
 
 export declare type DeleteManyFunction = (
     condition: any
 ) => Query<
     {
-        ok?: number;
-        n?: number;
+        ok?: number
+        n?: number
     } & {
-        deletedCount?: number;
+        deletedCount?: number
     }
->;
+>
 
 export declare type DeleteOneFunction = (
     condition: any
 ) => Query<
     {
-        ok?: number;
-        n?: number;
+        ok?: number
+        n?: number
     } & {
-        deletedCount?: number;
+        deletedCount?: number
     }
->;
+>
 
 export declare interface GetManyOptions {
-    populates?: string[];
+    populates?: string[]
     pagination?: {
-        disabled?: boolean;
-        page?: number;
-        pageSize?: number;
-    };
+        disabled?: boolean
+        page?: number
+        pageSize?: number
+    }
 }
