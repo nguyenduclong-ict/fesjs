@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import importAll from "./import-all";
-import { Express } from "express";
-export default function (app: Express, routerPath?) {
-    routerPath = routerPath || process.env.ROUTER_PATH;
-    if (!routerPath) throw new Error("routerPath not found!");
-    console.log("<* Generate Router *>");
-    const moudles = importAll(routerPath);
-=======
 import importAll from './import-all'
 import { Express } from 'express'
 export default function (app: Express, routerPath?) {
@@ -14,24 +5,12 @@ export default function (app: Express, routerPath?) {
     if (!routerPath) throw new Error('routerPath not found!')
     console.log('** Generate Router')
     const moudles = importAll(routerPath)
->>>>>>> fd371a147ced5aaeadadf7f1ed5eeafc132cb8df
     moudles
         .filter((m) => /router.js$/.test(m.originName))
         .forEach((element) => {
             const alias =
                 element.module.path ||
                 element.path
-<<<<<<< HEAD
-                    .replace(routerPath, "")
-                    .replace(/\.*router.js$/, "") // replace a.router.js to a/
-                    .replace(/\/*$/, "") // replace a// to a/
-                    .replace(/^$/, "/"); // replace '' to '/'
-            console.log("=>", alias);
-            app.use(alias, element.module.default);
-        });
-
-    console.log("<* Generate router success! *>");
-=======
                     .replace(routerPath, '')
                     .replace(/\.*router.js$/, '') // replace a.router.js to a/
                     .replace(/\/*$/, '') // replace a// to a/
@@ -41,5 +20,4 @@ export default function (app: Express, routerPath?) {
         })
 
     console.log('** Generate router success!')
->>>>>>> fd371a147ced5aaeadadf7f1ed5eeafc132cb8df
 }
