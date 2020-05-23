@@ -19,7 +19,7 @@ export default router;`.trim()
 
 const VALIDATOR_FILE = `
 import check from "check-types";
-import CreateValidator from "@/utils/fesjs/validator";
+import CreateValidator from "@/lib/fesjs/validator";
 export const ValidateBody = CreateValidator(
     {},
     "body"
