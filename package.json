@@ -1,10 +1,13 @@
 {
-  "name": "fesjs",
-  "version": "1.0.1",
-  "description": "Tool for express",
-  "main": "index.js",
-  "bin": "./cli/index.js",
-  "repository": "git@github.com:nguyenduclong-ict/fesjs.git",
-  "author": "Nguyễn Đức Long <longnd@rabiloo.com.vn>",
-  "license": "MIT"
+    "name": "fesjs-core",
+    "version": "1.0.1",
+    "description": "Tool for express",
+    "bin": "./cli/index.js",
+    "repository": "git@github.com:nguyenduclong-ict/fesjs.git",
+    "author": "Nguyễn Đức Long <longnd@rabiloo.com.vn>",
+    "license": "MIT",
+    "dependencies": {
+        "chalk": "^4.0.0",
+        "ora": "^4.0.4"
+    }
 }
