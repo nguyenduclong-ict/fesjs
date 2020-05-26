@@ -1,6 +1,6 @@
 const fs = require('fs')
 const Path = require('path')
-const log = require('../log')
+const log = require('./logger')
 
 const SERVICE_FILE = `
 import { Request, Response, NextFunction } from 'express';
