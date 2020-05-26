@@ -2,7 +2,7 @@ const { newProject } = require('./project')
 const { generateRouter } = require('./router')
 const { generateMongoModel } = require('./mongo')
 
-module.exports = () => {
+function main() {
     let [node, root, command, ...args] = process.argv
     process.env.PROJECT_PATH = root
     command = getCommand(command)
@@ -44,3 +44,5 @@ function generate(type, ...args) {
         if (modelType === 'mongo') generateMongoModel(...args)
     }
 }
+
+main()
